@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="18" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.intellibill.controller.AddConsumerController" styleClass="view-shell">
+    <padding>
+        <Insets top="20" right="22" bottom="20" left="22"/>
+    </padding>
+
+    <Label text="Add Consumer" styleClass="view-title"/>
+    <Label text="Register a new consumer profile for utility billing." styleClass="view-subtitle"/>
+
+    <VBox spacing="14" styleClass="card-panel">
+        <padding>
+            <Insets top="18" right="18" bottom="18" left="18"/>
+        </padding>
+
+        <GridPane hgap="12" vgap="12">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT"/>
+                <ColumnConstraints hgrow="ALWAYS" fillWidth="true"/>
+            </columnConstraints>
+
+            <Label text="Full Name" styleClass="field-label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="nameField" promptText="Enter consumer name" styleClass="field-input" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="Address" styleClass="field-label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="addressField" promptText="House/office address" styleClass="field-input" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <Label text="Consumer Type" styleClass="field-label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="typeCombo" maxWidth="Infinity" styleClass="field-input" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        </GridPane>
+
+        <Button text="Save Consumer" onAction="#onSaveConsumer" maxWidth="Infinity" styleClass="primary-button"/>
+        <Label fx:id="statusLabel" styleClass="status-text"/>
+    </VBox>
+</VBox>
