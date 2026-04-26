@@ -1,0 +1,2 @@
+# IntelliBill-An-Intelligent-Utility-Billing-System-1
+IntelliBill is a JavaFX 21 desktop application for utility billing (electricity, water, internet) built with Java 21 and MySQL. Features a pluggable Strategy-based pricing engine,DAO-backed, and a transparent file-based fallback when the database is unreachable. Supports partial payments, automatic bill status transitions, real-time revenue charts.
